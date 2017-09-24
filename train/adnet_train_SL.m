@@ -50,8 +50,8 @@ exec_order_score(end-3:2:end-1) = [];
 opts.frameBatch = 5;
 opts.minibatch_size = 128;
 
-for epoch = 1 : opts.numEpoch
-    for i = 1 : numel(train_db)
+for epoch = 1 : 1 %opts.numEpoch
+    for i = 1 : 1 % numel(train_db)
         net.move('gpu');
         dummy_net = dummy_nets{i};
         dummy_net.move('gpu');

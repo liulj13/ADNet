@@ -6,7 +6,7 @@ function [ feat, ims ] = get_conv_feature(net, img, boxes, opts)
 opts.input_size = 112;
 opts.crop_mode = 'wrap';
 opts.crop_padding = 16;
-opts.batchSize_test = 128;
+opts.batchSize_test = 128;  % 128 for 1GB GPU ,350 for 3GB GPU
 
 n = size(boxes,1);
 ims = get_extract_regions(img, boxes, opts);
